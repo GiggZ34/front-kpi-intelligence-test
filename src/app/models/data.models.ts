@@ -15,17 +15,17 @@ export interface IProject {
   nombre_de_lots?: number;
   enveloppe_prev_en_meu?: number;
   montant_des_ap_votes_en_meu?: number;
-  mode_de_devolution: string;
+  mode_de_devolution?: string;
   notification_du_marche?: Date;
   cao_attribution?: string;
   company_label?: string;
-  project_management_label: string;
-  representative_label: string;
+  project_management_label?: string;
+  representative_label?: string;
   annee_de_livraison?: string;
   etat_d_avancement: string;
   company?: number;
-  project_management: number;
-  representative: number;
+  project_management?: number;
+  representative?: number;
   establishment?: IEstablishment;
 }
 

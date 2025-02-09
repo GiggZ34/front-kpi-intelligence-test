@@ -60,7 +60,7 @@
               @if (project.mode_de_devolution == "Lots séparés") {
                 <li>Nombre de lots: <strong>{{ project.nombre_de_lots ?? "Non défini" }}</strong></li>
               }
-              <li>PPi: <strong>{{ project.ppi ?? "Non défini" }}</strong></li>
+              <li>PPi: <strong>{{ project.ppi }}</strong></li>
             </ul>
           </div>
         </div>
@@ -95,13 +95,13 @@
           }
           @if (kpi.voted_budget.city) {
             <echarts
-              [options]="options_by_category(project.montant_des_ap_votes_en_meu, kpi.voted_budget.city, 'Comparatif ' + project?.establishment?.city)"
+              [options]="options_by_category(project.montant_des_ap_votes_en_meu, kpi.voted_budget.city, 'Comparatif ' + project.establishment?.city)"
               [autoResize]="true" class="chart-container">
             </echarts>
           }
           @if (kpi.voted_budget.year) {
             <echarts
-              [options]="options_by_category(project.montant_des_ap_votes_en_meu, kpi.voted_budget.year, 'Comparatif ' + (project?.cao_attribution | date: 'YYYY'))"
+              [options]="options_by_category(project.montant_des_ap_votes_en_meu, kpi.voted_budget.year, 'Comparatif ' + (project.cao_attribution | date: 'YYYY'))"
               [autoResize]="true" class="chart-container">
             </echarts>
           }
@@ -134,13 +134,13 @@
           }
           @if (kpi.planned_budget.city) {
             <echarts
-              [options]="options_by_category(project.enveloppe_prev_en_meu, kpi.planned_budget.city, 'Comparatif ' + project?.establishment?.city)"
+              [options]="options_by_category(project.enveloppe_prev_en_meu, kpi.planned_budget.city, 'Comparatif ' + project.establishment?.city)"
               [autoResize]="true" class="chart-container">
             </echarts>
           }
           @if (kpi.planned_budget.year) {
             <echarts
-              [options]="options_by_category(project.enveloppe_prev_en_meu, kpi.planned_budget.year, 'Comparatif ' + (project?.cao_attribution | date: 'YYYY'))"
+              [options]="options_by_category(project.enveloppe_prev_en_meu, kpi.planned_budget.year, 'Comparatif ' + (project.cao_attribution | date: 'YYYY'))"
               [autoResize]="true" class="chart-container">
             </echarts>
           }

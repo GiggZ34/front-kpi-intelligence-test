@@ -1,12 +1,12 @@
 @if (project) {
   <com-nav-bar [navBarObjects]="navBarObjects"></com-nav-bar>
   <div id="project" class="sm:ml-48">
-    <div class="min-h-[450px] bg-primary-light flex flex-col justify-center items-center">
+    <div class="min-h-[450px] bg-primary-light flex flex-col gap-4 justify-center items-center">
       <h1 class="text-secondary">
         <fa-icon [icon]="projectIcon"></fa-icon>
       </h1>
       <h1 class="text-secondary text-center">{{ project.titreoperation }}</h1>
-      <p>{{ project.etat_d_avancement }}</p>
+      <p class="px-8 py-2 rounded-xl bg-primary font-bold">{{ project.etat_d_avancement }}</p>
     </div>
     <div class="p-10" id="detail">
       <h2 class="mb-6"># Détail</h2>
